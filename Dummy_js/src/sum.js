@@ -1,4 +1,5 @@
 export function sum(a, b) {
-    return a + b;
+    // Introduce a bug on purpose
+    return a - b;
   }
   
