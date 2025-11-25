@@ -6,10 +6,12 @@ function add(a, b) {
     return a - b;
   }
   
-  // This will be intentionally "wrong" in next PR
-  function multiply(a, b) {
-    return a + b; // Bug! should be a * b
-  }
+  const math = require('./mathUtils');
+
+  test('multiply 2 * 3', () => {
+    expect(math.multiply(2, 3)).toBe(6); // Will fail with buggy multiply
+  });
+  
   
   module.exports = { add, subtract, multiply };
   
